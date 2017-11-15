@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar Javascript</title>
+	<style type="text/css">
+		#wrap{
+			width: 200px;
+			background: black;
+			color: white;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="anoman.jpg">
+	<div id="wrap"></div>
+
+	<script type="text/javascript">
+		/*
+		 DEKLARASI VARIABLE
+		 ------------------
+		 1. Nama dimulai dengan huruf atau $ atau _
+		 2. Nama boleh mengandung huruf, angka, underscore _ dan dollar $
+		 3. Nama itu case sensitive
+		 4. Ada 'reserved words' yg tdk blh dipakai
+		 5. bagian kiri=nama, kanan=nilai
+		*/
+
+		//tipe data string
+		var text = "Halo selamat pagi!";
+
+		//tipe data number
+		var angka = 1234.13123;
+		var angka2 = angka + 23123;
+		var angka3 = angka2 + angka;
+
+		//mengubah variable
+		  text = "Halo selamat siang!"
+
+		//operator matematika + - / * %
+		var angka_baru = angka * angka2;
+
+		angka++;  //increment //menjumlahkan dengan 1
+		angka2--; //decrement  //mengurangi dengan 1
+
+		angka_baru = angka2 + angka;
+
+		/*
+							-------metode number-------
+		 1. toFixed(n)   = mengambil bbrp angka dibelakang koma 
+		 2. toString()   = mengubah tipe data number ke string
+		 3. random()     = cara menghasilkan angka secara acak
+		 4. min(a, b, c) = cara untuk mencari angka terkecil dr bbrp angka
+		 5. max(a, b, c) = cara untuk mencari angka terbesar dr bbrp angka
+		 6. round()	  	 = cara membulatkan desimal ke bil. bulat
+		 7. ceil()		 = cara membulatkan desimal ke atas brp pun komanya
+		 8. floor()	  	 = cara membulatkan desimal ke bawah brp pun komanya
+		 9. absolute, log
+		 10. random formula = Math.floor(Math.random()*x) + y
+		*/
+		var angka4 = angka.toString() + angka3;
+		var angka_new = Math.random().toFixed(2) + angka;
+		var angka5 = Math.min(angka3, angka2, angka3, angka_baru);
+		var angka7 = Math.round(angka);
+
+		var x = 8; //range
+		var y = 3; //batas minimal
+		// batas max = x + y
+		var angka8 = Math.floor( Math.random() * x ) + y;
+
+		/*
+							-------metode string-------
+		 1. length		= berapa panjang tipe data string yg ingin dilihat
+		 2. indexOf()     = mencari text tertentu dlm sebuah tipe data			string (dimulai dari 0)(mencari yg terdepan)
+		 3. lastIndexOf() = mencari text tertentu dlm sebuah tipe data 			string (dimulai dari 0)(mencari yg terakhir)
+		 4. search() = indexOf
+		 5. charAt() = cari berdasar posisi, yg dicari angka, tampil string
+		 6. toUpperCase() = mengubah semua huruf menjadi besar
+		 7. toLowerCase() = mengubah semua huruf menjadi kecil
+		 8. replace("", "") = mengubah huruf/kata/kalimat 
+		 	("before", "after")
+		 9. substring(start, end) = mengambil bag tertentu (angka)
+		 10. substr(start, length) = mengambil bag tertentu (angka)
+		 11. parseInt = mengubah string menjadi angka (integer)
+		 12. parseFloat = mengubah string menjadi angka (float)
+		*/
+		var nama = "31231.31";
+		var hasil = parseFloat(nama) + 15;
+
+
+		/* 
+		 1. memilih id wrap 
+		 2. inner HTML = menulis konten
+		*/
+		document.getElementById("wrap").innerHTML = hasil;		
+	</script>
+</body>
+</html>

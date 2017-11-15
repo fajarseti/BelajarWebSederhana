@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Responsive</title>
+
+	<style type="text/css">
+
+		*{ 
+			margin: 0;
+			padding: 0;
+		}
+
+		body{
+			font-size: 15px;
+		}
+
+		#header{
+			background-color: green;
+			height: 100px;
+			max-width: 100%;
+		}
+
+		h1{
+			font-size: 2.5em;
+			text-align: center;
+		}
+
+		#main{
+			background-color: #c55252;
+			height: 500px;
+			width: 80%;
+			float: left;
+		}
+
+		.col-4{
+			width: 23%;
+			margin: 1%;
+			float: left;
+			height: 200px;
+			background-color: blue;
+			font-size: 2em;
+		}
+
+		#sidebar{
+			background-color: #188888;
+			height: 500px;
+			width: 20%;
+			float: left;
+		}
+
+		#footer{
+			background-color: #36eab1;
+			height: 40px;
+			width: 100%;
+			clear: both;
+			font-size: 1.5em;
+		}
+
+		/* layar lebih kecil dari 1000px maka lakukan ini */
+		@media screen and (max-width: 1000px){
+			.col-4{
+				width: 48%;
+			}
+		}
+
+		/* layar lebih kecil dari 500px maka lakukan ini */
+		@media screen and (max-width: 760px){
+			body{
+				font-size: 12px;
+			}
+
+			.col-4{
+				width: 96%;
+				margin: 2%;
+			}
+
+			#main{
+				height: auto;
+			}
+
+			#main, #sidebar{
+				width: 100%;
+			}
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div id="header">
+		<h1>Judul Web</h1>
+	</div>
+
+	<div id="main">
+		<div class="col-4">Text Disini</div>
+		<div class="col-4">Text Disini</div>
+		<div class="col-4">Text Disini</div>
+		<div class="col-4">Text Disini</div>
+	</div>
+
+	<div id="sidebar"></div>
+
+	<div id="footer">copyright&copy;2017</div>
+
+</body>
+</html>

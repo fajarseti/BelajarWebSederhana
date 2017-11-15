@@ -1,0 +1,78 @@
+<h1>CSS TIPS and TRIK</h1>
+
+<a href="#daftar">Daftar</a>
+<a href="#login">Login</a>
+
+<div class="kotak" id="daftar">
+	<div class="in-kotak">
+		<input type="text" name="name" value=""><br>
+		<input type="password" name="password" value=""><br>
+		<button>Daftar</button>
+		<a href="#x">Tutup</a>
+	</div>
+</div>
+
+<div class="kotak" id="login">
+	<div class="in-kotak">
+		<input type="text" name="name" value=""><br>
+		<input type="password" name="password" value=""><br>
+		<button>Login</button>
+		<a href="#x">Tutup</a>
+	</div>
+</div>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel luctus velit. Nunc faucibus turpis sem, non euismod ipsum convallis vitae. Cras mattis non odio a maximus. Donec dapibus eleifend nunc, vel molestie urna. Cras quis augue ut lacus mollis vehicula convallis sed augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut facilisis nunc sit amet tristique gravida.
+
+Aliquam ex ligula, placerat vel laoreet quis, fringilla vel magna. Duis in elit vel mi vulputate dictum. Fusce pretium tempus nunc a molestie. Cras et odio interdum justo vulputate consectetur. Sed id nulla consectetur, consectetur erat nec, tincidunt neque. Nulla maximus, neque vel luctus gravida, ligula purus elementum mi, id efficitur sem ex sit amet neque. Sed gravida sit amet lectus sed dignissim. Ut at sem in magna laoreet mattis. Vivamus aliquam mi eu libero elementum, vitae lacinia enim congue. Donec sollicitudin dolor feugiat, eleifend neque in, ornare eros. Nullam efficitur gravida augue, in maximus purus tempor non.
+
+Donec nec consequat felis. Suspendisse lobortis dui tortor, eu fermentum dolor cursus eget. Donec massa magna, varius dignissim fermentum at, gravida vitae odio. Maecenas convallis lacinia nisi at iaculis. Nulla vulputate magna urna. Morbi id odio a diam viverra accumsan vel vitae ipsum. Aenean sit amet posuere ipsum, sed consequat justo. Sed vehicula pretium turpis, eu posuere libero.
+
+Etiam rutrum nisi elit, sit amet auctor diam molestie luctus. Maecenas egestas sagittis aliquam. Quisque quis vehicula dolor. Sed molestie justo ac magna aliquam imperdiet. Duis at magna ullamcorper, ullamcorper metus id, volutpat metus. Mauris placerat orci sollicitudin ex hendrerit, sed porta metus scelerisque. Duis at tortor in magna interdum placerat et quis erat. Cras laoreet eleifend sapien, id aliquet eros ullamcorper ac. Curabitur efficitur at ligula sit amet tempus. Donec sit amet mauris sagittis, lacinia massa in, bibendum est. Nam convallis porta neque. Curabitur placerat est nec ipsum tristique, sed aliquet urna volutpat. Vivamus eu rutrum mi, a porta dui. Donec non posuere nulla, nec vestibulum felis. Curabitur gravida neque sit amet purus consectetur elementum vel ac mi. Nulla suscipit nec elit a congue.
+
+Quisque iaculis nisi a purus molestie, id luctus ligula pellentesque. Nulla facilisi. Maecenas sodales at lectus sit amet ultricies. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque imperdiet massa in lacus bibendum congue. Nulla viverra nisl lacus, quis tempor dui rhoncus in. Sed in vulputate risus. Aliquam varius non ligula non blandit. Quisque quis pretium mi, eu tempus tortor. Nullam turpis lectus, condimentum sed ligula in, aliquam elementum ligula. Phasellus eu lacus non nisi pretium maximus ut sit amet purus. Praesent eu eros in sapien gravida aliquet aliquam ac nisi. Ut tempus euismod neque, sed accumsan erat faucibus nec. Curabitur mattis convallis erat, non tincidunt ipsum dignissim a. Cras sodales massa vestibulum, laoreet magna a, pharetra mi.
+</p>
+
+<style type="text/css" media="screen">
+	
+	body{
+		margin: 15% 15%;
+		font-family: sans-serif;
+	}
+
+	a{
+		color: black;
+		text-decoration: none;
+	}
+
+	.in-kotak{
+		background-color: rgb(161, 161, 179);
+		padding: 10px;
+		position: fixed;
+		left: 50%;
+		height: 100px;
+		width: 300px;
+		margin-left: -150px;
+		transform: translateY(-400%);
+		transition: transform 0.5s ease;
+	}
+
+	.kotak:before{
+		content: '';
+		background-color: rgba(0, 0, 0, 0.8);
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: none;
+	}
+
+	.kotak:target .in-kotak{
+		transform: translateY(0%);
+	}
+
+	.kotak:target:before{
+		display: block;
+	}
+</style>

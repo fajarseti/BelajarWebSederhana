@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Javascript</title>
+	<style type="text/css">
+		.merah{
+			background: red;
+		}
+
+		.black{
+			border: 2px solid black;
+		}
+	</style>
+</head>
+<body onload="">
+	<h1>Belajar DOM Javascript</h1>
+	<img onclick="change()"  src="anoman.jpg" width="200" id="gambar">
+
+	<input type="text" value="nama" id="input" class="black">
+	<input type="submit" id="submit">
+	Namanya adalah <span id="p1"></span>
+	<script type="text/javascript">
+		var img = document.getElementById("gambar");
+		img.width = 150; //nama var.attribute = nilai yg akan diubah
+
+		var input = document.getElementById("input");
+		input.value = "nama...";
+		//input.setAttribute("class", "merah");
+		input.className += " merah";
+		input.style.border = "5px solid yellow";
+		input.style.background = "blue";
+
+		//----------------- event -------------------//
+		//cara ke-1
+		function change(){
+			img.src = "jersey.png";
+		}; 
+
+		//cara ke-2
+		// input.onclick = function(){ 
+		// 	input.style.background = "yellow"; 
+		// }
+	
+		function berubah2(){
+			input.style.background = "yellow";
+		};
+
+		//cara ke-3
+		input.addEventListener("mouseenter", berubah2);
+
+		input.addEventListener("mouseleave", function(){
+			input.style.background = "blue";
+		});
+
+		var submit = document.getElementById("submit");
+		var span = document.getElementById("p1");
+
+		submit.onclick = function(){
+			var text = input.value;
+			span.innerHTML = text;
+		}
+
+
+	</script>
+</body>
+</html>

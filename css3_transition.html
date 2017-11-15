@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar CSS 3</title>
+
+	<style type="text/css">
+		div{
+			width:100px;
+			height:100px;
+			background:red;
+			margin-bottom:10px;
+			/* transition: property waktu; */
+			transition: width 2s, background 2s, height 2s;
+		}
+		#div1:hover{
+			width: 200px;
+		}
+		#div2:hover{
+			transition-delay: 1s;
+			background:blue;
+		}
+		#div3:hover{
+			transition-timing-function: step-end;
+			height: 200px;
+		}
+	</style>	
+</head>
+<body>
+
+	<h1>Transition</h1>
+	<div id="div1"></div>
+
+	<div id="div2"></div>
+
+	<div id="div3"></div>
+
+</body>
+</html>

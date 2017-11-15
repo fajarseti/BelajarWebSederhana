@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar Javascript</title>
+	<style type="text/css">
+		#wrap{
+			background: black;
+			color: white;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="anoman.jpg">
+	<div id="wrap"></div>
+
+	<script type="text/javascript">
+		//tipe data boolean
+		var x = true;
+		var y = false;
+
+		//if dan else
+		//operator logika (== != > >= < <=)
+		//dan && ... atau ||
+		var barang = 50000;
+		var programmer = 250000;
+		var designer = 50000;
+
+		/*
+		if(syarat){
+			kondisi terpenuhi	 
+		}
+		else{
+			kondisi tidak terpenuhi
+		}
+		*/
+
+		if(programmer == barang){
+		   alert("uang programmer cukup");
+		}else if(designer == barang){
+			alert("uang designer kurang");
+		}
+		else{
+			alert("uang tidak cukup")
+		}
+
+		//nested if
+		if(programmer > barang){
+		   if(programmer > barang*2){
+		   	alert("programmer bisa beli lebih dari 1 barang");
+		   }else{
+		   	alert("programmer bisa beli 1 barang");
+		   }
+		}else{
+			alert("programmer uangnya kurang");
+		}
+
+		//switch case
+		var nama = "fajar123";
+
+		switch(nama){
+			case"Reza":
+				alert("Namanya adalah Reza!");
+				break;
+
+			case"Budi":
+				alert("Namanya adalah Budi!");
+				break;
+
+			case"fajar":
+				alert("Namanya adalah fajar!");
+				break;
+
+			default:
+				alert("Tidak ada orang!");
+		}
+	</script>
+</body>
+</html>

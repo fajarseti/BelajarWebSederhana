@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar CSS 3</title>
+
+	<style type="text/css">
+		body :not(h1){/*not=selain*/
+			color: red;
+		}
+		p :first-child{
+			color: blue;
+		}
+		p :last-child{
+			font-size: 30px;
+			background: yellow;
+		}
+		p :only-child{
+			background: green;
+		}
+		ul :nth-child(even){
+			text-decoration: underline;
+		}
+		ul :nth-child(odd){
+			text-decoration: line-through;
+		}
+		ul :nth-child(3n+0){
+			background: yellow;
+		}
+		input:checked{
+			width: 100px;
+		}
+		input:enabled{
+			border: 2px solid blue;
+		}
+		input:disabled{
+			border: 2px solid red;
+		}
+		input:invalid{
+			background: red;
+			color: white;
+		}
+	</style>
+
+</head>
+<body>
+
+	<h1>Selektor - Pseudo Classes</h1>
+
+	<div>
+		<p>Paragraf pertama</p>
+		<p>Paragraf kedua</p>
+		<p>Paragraf ketiga</p>
+	</div>
+	<br>
+	<div>
+		<span>Paragraf pertama</span>
+		<p>Paragraf kedua</p>
+		<p>Paragraf ketiga</p>
+	</div>
+	<br>
+	<div>
+		<p>Paragraf</p>
+	</div>
+
+	<h1>Nth Child</h1>
+	<ul>
+		<li>list 1</li>
+		<li>list 2</li>
+		<li>list 3</li>
+		<li>list 4</li>
+		<li>list 5</li>
+		<li>list 6</li>
+		<li>list 7</li>
+		<li>list 8</li>
+		<li>list 9</li>
+		<li>list 10</li>
+	</ul>
+
+	<h1>Input</h1>
+	<input type="checkbox">Male
+	<input type="checkbox">Female
+	<br><br>
+
+	<input type="text" placeholder="nama">
+	<input type="text" placeholder="alamat">
+	<input type="text" placeholder="kota" disabled>
+	<input type="email" placeholder="email">
+
+	<br><br><br><br>
+	Sekolah Koding
+</body>
+</html>

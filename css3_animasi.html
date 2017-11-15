@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar CSS 3</title>
+	
+	<style type="text/css">
+
+		body{
+			margin-bottom: 500px;
+			margin-left: 50px;
+		}
+
+		div{
+			background: red;
+			width: 200px;
+			height: 200px;
+			animation-name: animasi;
+			animation-duration: 5s;
+			animation-iteration-count: 2;
+			/*animation-direction: alternate;*/ /* alternate: ganjil genap */
+			animation-delay: 1s;
+			animation-fill-mode: forwards; /* nentuin berhenti di kondisi akhir */
+			animation-timing-function: ease-out;
+			animation-play-state: running;
+		}
+		div:hover{
+			animation-play-state: paused;
+		}
+
+		@keyframes animasi{
+			0% { background: red; }
+			25% { background: blue; width: 250px; height: 150px }
+			50% { background: green; width: 150px; height: 250px }
+			100% { background: yellow; width: 200px; height: 200px }
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<h1>Animasi</h1>
+	<div></div>
+
+</body>
+</html>

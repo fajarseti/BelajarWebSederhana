@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Javascript</title>
+</head>
+<body>
+	<h1>Belajar DOM Javascript</h1>
+	<img src="anoman.jpg">
+
+	<div id="box1"></div><br>
+
+	<div class="boxes">1</div>
+	<div class="boxes">2</div>
+	<div class="boxes">3</div>
+
+	<ul>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>Javascript</li>
+	</ul>
+
+	<script type="text/javascript">
+		//selektor
+		document.getElementById("box1").innerHTML = "Sekolah Koding";
+
+		var boxes = document.getElementsByClassName("boxes");
+		boxes[0].innerHTML = "bag 11";
+		boxes[1].innerHTML  = "bag 22";
+		boxes[2].innerHTML = "bag 33";
+
+		document.getElementsByTagName("div")[3].innerHTML = "hahaha";
+		document.getElementsByTagName("li")[0].innerHTML = "huhuhu";
+
+		document.querySelectorAll("#box1")[0].innerHTML = "Koding 666";
+		document.querySelectorAll(".boxes")[0].innerHTML = "Koding 666";
+		document.querySelectorAll("ul li")[0].innerHTML = "Koding 666";
+	</script>
+
+</body>
+</html>

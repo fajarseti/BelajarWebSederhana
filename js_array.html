@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar Javascript</title>
+	<style type="text/css">
+		#wrap{
+			width: 700px;
+			background: black;
+			color: white;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="anoman.jpg">
+	<div id="wrap"></div>
+
+	<script type="text/javascript">
+		//tipe data array: mengandung lebih dari 1 nilai
+		//array dimulai dari angka 0
+		var kotak = ["fajar", "reza", 12];
+		kotak[2] = "Niko"
+		var text = "Namanya adalah " + kotak[2]
+
+		/*sort, reverse, concat, length, join("separator"),
+		1. sort = mengurutkan berdasar urutan abjad atau angka
+		2. reverse = membalikkan urutan tulisan
+		3. concat = menggabungkan 2 atau lebih array
+		4. length = menghitung berapa total data array
+		5. join = menentukan pemisah antar data array
+		*/
+		var nama = ["Fajar", "Reza", "Najwan"];
+		var nama1 = ["Nanda", "Budi", "Hilma"];
+		var nama2 = ["Alex", "Ozil", "Eko"];
+
+		var hasil = nama.concat(nama1, nama2);
+
+		/*
+		1. splice() = add(posisi yg diinginkan, dihapus?bag setelahnya, isi) 
+		          = remove(posisi yg diinginkan, dihapus?bag setelahnya)
+		2. pop() = menghapus dan mengambil nilai bag akhir
+		   push() = menambahkan data baru di bag akhir
+		   shift() = menghapus dan mengambil nilai bag awal
+		   unshift()= menambahkan data baru di bag awal
+		*/
+
+		nama.splice(1, 0, "Putri", "Tya")//add
+		nama1.splice(1, 1)//remove
+
+		nama2.pop();
+		nama2.push("haha");
+
+		nama2.shift();
+		nama2.unshift("huhu");
+
+		document.getElementById("wrap").innerHTML = nama2.join(" | ");
+	</script>
+
+</body>
+</html>

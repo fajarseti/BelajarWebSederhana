@@ -1,0 +1,81 @@
+/*
+http://www.w3schools.com/cssref/css_selectors.asp
+https://www.onblastblog.com/css3-cheat-sheet/
+*/
+.nama{
+	color:blue;
+}
+
+.sub{
+	color: red;
+}
+
+p{
+	color: black;
+	font-size: 30px;
+}
+
+#kata{
+	text-align: justify;
+	text-indent: 25px;
+	letter-spacing: 5px;
+	word-spacing: 5px;
+	line-height: 35px;	
+}
+
+#coba{
+	background-color: red;
+}
+
+a{
+	display: inline-block;
+	background-color: grey;
+	text-align: center;	
+	margin: 3px;
+	padding: 10px;
+	border: 3px solid black;
+}
+
+a:hover{
+	color:black;
+}
+
+.menu:link{
+	color:white;
+}
+
+h1, h2{
+	color:grey;
+}
+
+/* tag a di dalam div*/
+div a{
+	background: red;
+}
+
+/* tag a langsung di bawah parentnya (div) */
+div > a{
+	background: yellow;
+}
+
+/* tag div setelah tag p */
+p + div{
+	background: blue;
+}
+
+/* semua tag p yang ada setelah div */
+div ~ p{
+	background: red;
+}
+
+div:hover > p{
+	color: white;
+}
+
+dt:hover + dd{
+	color: black;
+}
+
+input:focus, textarea:focus{
+	background:green;
+}

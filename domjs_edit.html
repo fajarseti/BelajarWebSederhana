@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Javascript</title>
+</head>
+<body>
+	<h1>Belajar DOM Javascript</h1>
+	<img src="anoman.jpg">
+
+	<div id="box1">
+		<div id="p1">Paragraf 1</div>
+	</div>
+
+	<script type="text/javascript">
+		//edit HTML
+		//menambahkan elemen
+		var el = document.createElement("h2");
+		var text = document.createTextNode("Belajar Programming Online");
+		var box = document.getElementById("box1");
+
+		el.appendChild(text); //gabungin h2 dengan text
+		box.appendChild(el); //mengambil elemen dan memasukkan ke id box agar text muncul di browser
+
+		//menghapus
+		//box.removeChild(el);
+
+		//mengedit
+		var el2 = document.createElement("h3");
+		var text2 = document.createTextNode("Belajar Online");
+		el2.appendChild(text2);
+
+		var p1 = document.getElementById("p1");
+		
+		box.replaceChild(el2, p1); //(baru, lama)
+
+	</script>
+
+</body>
+</html>

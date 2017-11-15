@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Belajar CSS 3</title>
+
+	<style type="text/css">
+		div{
+			width:100px;
+			height:100px;
+			margin-bottom: 5px;
+		}
+		#div0{
+			perspective: 100px;
+			perspective-origin: 40% 40%;
+		}
+		#div1{
+			background:blue;
+			transform: rotateX(45deg);
+		}
+		#div2, #div4{
+			perspective: 100px;
+			perspective-origin: 60% 60%;
+		}
+		#div3{
+			background:red;
+			transform: translateZ(1px) rotateX(45deg);
+			transition: transform 2s;
+		}
+		#div3:hover{
+			transform: translateZ(10px) rotateY(35deg);
+		}
+		#div5{
+			background:green;
+			transform: scaleZ(1) rotateZ(35deg);
+			transition: transform 2s;
+			border: 1px solid black;
+		}
+		#div5:hover{
+			transform: scaleX(3)  rotateX(35deg);
+		}
+	</style>
+</head>
+<body>
+
+<!-- 
+	efek hanya pada 3D elemen
+	efek pada child bukan parent 
+-->
+
+	<h1>Perspective</h1>
+	<div id="div0">
+		<div id="div1"></div>
+	</div>
+
+	<h1>Translate & Rotate</h1>
+	<div id="div2">
+		<div id="div3"></div>
+	</div>
+
+
+	<h1>Scale</h1>
+	<div id="div4">
+		<div id="div5">Div 5</div>
+	</div>
+
+</body>
+</html>

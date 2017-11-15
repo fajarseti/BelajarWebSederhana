@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Galeri Javascript</title>
+</head>
+<body>
+	<h1>Galeri Javascript</h1>
+
+	<img src="gambar/1.jpg" width="300" id="gambar">
+	<br>
+
+	<div id="caption">1</div>
+	<br>
+
+	<a href="#" onclick="before()"> << </a>
+	<a href="#" onclick="ganti(1)">1</a>
+	<a href="#" onclick="ganti(2)">2</a>
+	<a href="#" onclick="ganti(3)">3</a>
+	<a href="#" onclick="ganti(4)">4</a>
+	<a href="#" onclick="ganti(5)">5</a>
+	<a href="#" onclick="after()"> >> </a>
+
+	<script type="text/javascript">		
+		var nomor = 1;
+		var caption = document.getElementById("caption");
+		var text = ["0", "1", "2", "3", "4", "5"];
+
+		function ganti(angka){
+			nomor = angka;
+			ganti_gambar(angka);
+		}
+
+		function before(){
+			nomor--;
+			if (nomor < 1) nomor = 5;
+			ganti_gambar(nomor);
+		}
+
+		function after(){
+			nomor++;
+			if (nomor > 5) nomor = 1;
+			ganti_gambar(nomor);
+		}
+
+		//refactor fungsinya berguna untuk mengefisienkan koding yang berulang agar hemat source dan bersih
+		function ganti_gambar(angka){
+			var lokasi = "gambar/" + angka + ".jpg";
+			document.getElementById("gambar").src = lokasi;
+			caption.innerHTML = text[angka];
+			return false;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar Javascript</title>
+	<style type="text/css">
+		#wrap{
+			width: 400px;
+			background: black;
+			color: white;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="anoman.jpg">
+	<div id="wrap"></div>
+
+	<script type="text/javascript">
+		// fungsi
+
+		// menuliskan fungsi 
+		// function printText(){
+		// 	var x = "Sekolah Koding";
+		// 	document.getElementById("wrap").innerHTML = x;
+		// }
+
+		// memanggil fungsi
+		// printText();
+
+		// parameter pada fungsi
+		function printText(nama, nama2){
+			var text = nama + nama2 + " yang dulu";
+			document.getElementById("wrap").innerHTML = text;
+		}
+
+		var a = " 123";
+		printText("Sekolah Koding", " 456" + a);
+
+		// return pada javascript
+		function jumlah(angka, angka1){
+			return angka + angka1 + 20;
+		}
+
+		var b = jumlah(10, 15);
+		document.getElementById("wrap").innerHTML = b;
+
+		// scope pada javascript
+		// globe var
+		var text = "Sekolah Koding";
+
+		function print(){
+			//local var
+			var text2 = "Halo";
+
+			//global
+			text3 = "HEHEHEH";
+			//document.getElementById("wrap").innerHTML = text3;
+		}
+
+		print();
+		document.getElementById("wrap").innerHTML = text3;
+
+		
+	</script>
+
+</body>
+</html>
